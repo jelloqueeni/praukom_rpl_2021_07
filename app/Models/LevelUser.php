@@ -14,4 +14,9 @@ class LevelUser extends Model
   public $timestamps = false;
   public $incrementing = false;
   protected $keyType = 'string';
+  protected $guarded = [];
+
+  public function akun () {
+    return $this->hasMany(User::class,'kode_level','kode_level');
+  }
 }

@@ -70,10 +70,6 @@
                 <div class="card-body">
                   <div class="mb-3 d-flex gap-2 justify-content-end">
                     <div class="btn-group dropstart">
-                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Pilih Jurusan
-                      </button>
                       <ul class="dropdown-menu">
                         @foreach ($jurusan as $item)
                           <li><a class="dropdown-item" href="#">{{ $item->nama_jurusan }}</a></li>

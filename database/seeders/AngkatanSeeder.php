@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Angkatan;
+use App\Models\{Angkatan, User, LevelUser};
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -32,6 +32,21 @@ class AngkatanSeeder extends Seeder
         'tahun_masuk' => '2020',
         'tahun_keluar' => '2023'
       ],
+    ]);
+
+    LevelUser::insert([
+      [
+        'kode_level' => 'lv1',
+        'nama_level' => 'admin',
+        'keterangan' => 'admin'
+      ]
+    ]);
+
+    User::create([
+      'username' => 'admin',
+      'kode_level' => 'lv1',
+      'email' => 'admin@gmail.com',
+      'password' => bcrypt('admin')
     ]);
   }
 }

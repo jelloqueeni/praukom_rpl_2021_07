@@ -19,7 +19,7 @@ return new class extends Migration
       $table->char('kode_level', 3);
 
       $table->string('email', 50);
-      $table->string('password', 25);
+      $table->string('password');
 
       $table
         ->foreign('kode_level')

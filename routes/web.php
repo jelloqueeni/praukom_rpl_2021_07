@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OtentikasiController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\JurusanKelasController;
 use App\Http\Controllers\KelasController;
@@ -15,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::controller(OtentikasiController::class)->group(function () {
+  Route::get('/auth', 'formlogin')->name('login');
+  Route::post('auth', 'authenticate');
+  Route::get('logout', 'logout')->name('logout');
+  // Route::get('/auth', [OtentikasiController::class, 'login']);
+});
+
+Route::middleware('cekLevel:lv1')->group(function () {
+  // admin
+  Route::redirect('/', '/dashboard');
+});
 
 Route::redirect('/', '/dashboard');
 
