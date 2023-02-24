@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class OtentikasiController extends Controller
 {
-    public function __construct()
-    {
-        // $this->middleware('auth:web',[]);
-
+    public function formlogin(){
+        return view('login.login');
     }
     public function authenticate(Request $request)
     {
@@ -26,9 +24,10 @@ class OtentikasiController extends Controller
             $request->session()->regenerate();
             
             $role = Auth::user()->level_user->kode_level;
+            // dd($role);
             switch ($role) {
                 case 'lv1':
-                    return redirect()->intended('/admin/dashboard');
+                    return redirect()->intended('/dashboard');
                     break;
                 case 'lv2':
                     return redirect()->intended('/siswa/dashboard');
@@ -41,7 +40,7 @@ class OtentikasiController extends Controller
                     break;
             }
         }
- 
+        
         return back()->withErrors([
             'email' => 'Email atau Password Salah!',
             
@@ -50,9 +49,7 @@ class OtentikasiController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect('/');
+        return redirect('/auth');
     }
-    public function formlogin(){
-        return view('login.login');
-    }
+    
 }

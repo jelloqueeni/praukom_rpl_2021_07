@@ -19,7 +19,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="{{ url('/dashboard') }}"  data-bs-toggle="tooltip" data-bs-placement="right" title="Log Out">
+      <a class="nav-link" href="{{ route('logout') }}"  data-bs-toggle="tooltip" data-bs-placement="right" title="Log Out">
         <i class="fs-5 bi bi-box-arrow-right"></i>
       </a>
     </li>

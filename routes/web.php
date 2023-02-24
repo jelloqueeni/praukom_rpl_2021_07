@@ -19,15 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(OtentikasiController::class)->group(function () {
   Route::get('/auth', 'formlogin')->name('login');
-  Route::post('auth', 'authenticate');
+  Route::post('/auth', 'authenticate')->name('login');
   Route::get('logout', 'logout')->name('logout');
   // Route::get('/auth', [OtentikasiController::class, 'login']);
 });
 
-Route::middleware('cekLevel:lv1')->group(function () {
-  // admin
-  Route::redirect('/', '/dashboard');
-});
+// Route::middleware('cekLevel:lv1')->group(function () {
+//   // admin
+//   Route::redirect('/', '/dashboard');
+// });
 
 Route::redirect('/', '/dashboard');
 
