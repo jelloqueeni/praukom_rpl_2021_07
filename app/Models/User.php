@@ -50,6 +50,6 @@ class User extends Authenticatable
   ];
 
   public function level_user() {
-    return $this->belongsTo(Leveluser::class, 'kode_level', 'kode_level');
+    return $this->hasOne(Leveluser::class, 'kode_level', 'kode_level');
   }
 }

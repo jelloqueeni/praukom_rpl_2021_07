@@ -19,9 +19,9 @@ class PenggunaSeeder extends Seeder
         $Pengguna = collect([
             [
 
-                'username' => 'admin',
+                'username' => 'admin2',
                 'kode_level' => 'lv1',
-                'email' => 'admin1@gmail.com',
+                'email' => 'ad@gmail.com',
                 'password' => Hash::make('12345')
             ]
         ]);

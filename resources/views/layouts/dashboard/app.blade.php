@@ -31,10 +31,7 @@
   </main>
   @include('layouts.dashboard.partials.footer')
 
-  <a href="#" class="back-to-top rounded-circle d-flex align-items-center justify-content-center"
-    style="font-size: 4rem !important;">
-    <i class="bi bi-plus"></i>
-  </a>
+  @stack('btn.plus')
 
   <script src="https://kit.fontawesome.com/7f83ea54bd.js" crossorigin="anonymous"></script>
 

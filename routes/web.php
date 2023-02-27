@@ -3,6 +3,7 @@
 use App\Http\Controllers\OtentikasiController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\JurusanKelasController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\KelasController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(OtentikasiController::class)->group(function () {
   Route::get('/auth', 'formlogin')->name('login');
-  Route::post('/auth', 'authenticate')->name('login');
+  Route::post('/auth', 'authenticate')->name('as');
   Route::get('logout', 'logout')->name('logout');
   // Route::get('/auth', [OtentikasiController::class, 'login']);
 });
@@ -49,5 +50,12 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/{kelas}/edit', 'edit')->name('kelas.edit');
     Route::put('/{kelas}', 'update')->name('kelas.update');
     Route::delete('/{kelas}', 'destroy')->name('kelas.delete');
+  });
+
+  Route::prefix('/form')->controller(FormController::class)->group(function () {
+    Route::get('/', 'index')
+        ->name('form.create');
+    Route::post('/', 'store')
+        ->name('form.store');
   });
 });

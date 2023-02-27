@@ -40,7 +40,7 @@
                     <img src="{{ asset('assets/img/1.png')}}" style="width:170px;" alt="logo">
                   </div>
   
-                  <form action="{{route ('login')}}" method="POST">
+                  <form action="/auth" method="POST">
                     @csrf
 
                     <div class="text-center mb-4 pb-1">
@@ -53,7 +53,7 @@
             
                     <div class="form-outline mb-4">
                       <input type="text" id="username" class="form-control @error('username') is-invalid @enderror"
-                      placeholder="masukan username / email" autofocus name="email"/>
+                      placeholder="masukan e-mail" autofocus name="email"/>
                       @error('username')
                       <div class="invalid-feedback">
                           {{ $message }}

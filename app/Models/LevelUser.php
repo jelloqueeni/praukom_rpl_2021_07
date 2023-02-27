@@ -17,6 +17,6 @@ class LevelUser extends Model
   protected $guarded = [];
 
   public function akun () {
-    return $this->hasMany(User::class,'kode_level','kode_level');
+    return $this->belongsTo(User::class,'kode_level','kode_level');
   }
 }

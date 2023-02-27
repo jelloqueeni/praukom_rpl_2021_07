@@ -116,7 +116,7 @@
                     <div>
                       <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex flex-column w-100 gap-1 justify-content-between">
-                          <h5>Paijo</h5>
+                          <h5>Claire Vionetta</h5>
                           <small>10 Menit Lalu</small>
                         </div>
                       </a>
@@ -130,7 +130,7 @@
                     <div>
                       <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex flex-column w-100 gap-1 justify-content-between">
-                          <h5>Paijo</h5>
+                          <h5>Felixia Anceline</h5>
                           <small>10 Menit Lalu</small>
                         </div>
                       </a>
@@ -144,7 +144,7 @@
                     <div>
                       <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex flex-column w-100 gap-1 justify-content-between">
-                          <h5>Paijo</h5>
+                          <h5>Santi Amelia</h5>
                           <small>10 Menit Lalu</small>
                         </div>
                       </a>
@@ -158,7 +158,7 @@
                     <div>
                       <a href="#" class="text-decoration-none text-dark">
                         <div class="d-flex flex-column w-100 gap-1 justify-content-between">
-                          <h5>Paijo</h5>
+                          <h5>Sheila Naila</h5>
                           <small>10 Menit Lalu</small>
                         </div>
                       </a>
@@ -239,3 +239,10 @@
     </div>
   </section>
 @endsection
+
+@push('btn.plus')
+<a href="{{ route('form.create') }}" class="back-to-top rounded-circle d-flex align-items-center justify-content-center"
+    style="font-size: 4rem !important;">
+    <i class="bi bi-plus"></i>
+  </a>
+@endpush

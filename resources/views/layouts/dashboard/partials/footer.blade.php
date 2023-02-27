@@ -33,7 +33,7 @@
       <form action="" method="POST" class="px-0">
         @csrf
         <h4 class="fw-bold mb-4">
-          Apakah ada yang dibibingungkan oleh aplikasi Aku Rajin?
+          Apakah ada yang dibingungkan oleh aplikasi Aku Rajin?
         </h4>
         <div class="input-group mb-3 w-100">
           <input type="text" class="form-control" placeholder="Ketik Di sini">
