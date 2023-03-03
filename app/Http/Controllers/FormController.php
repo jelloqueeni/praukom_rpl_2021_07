@@ -11,6 +11,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Collection;
 
 final class FormController extends Controller {
@@ -28,7 +29,7 @@ final class FormController extends Controller {
             'username' =>$request->input('username'),
             'kode_level' =>$request->input('level_user'),
             'email' =>$request->input('email'),
-            'password' =>$request->input('password')
+            'password' => Hash::make($request->input('password'))
         ]);
         return to_route('jurusan.kelas.index')
         ->with('sukses', 'Akun berhasil dibuat');

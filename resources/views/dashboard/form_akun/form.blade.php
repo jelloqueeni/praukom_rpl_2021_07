@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">E-mail</label>
-                      <input type="text" id="username" class="form-control" placeholder= "masukkan e-mail" name="email" >
+                      <input type="text" id="email" class="form-control" placeholder= "masukkan e-mail" name="email" >
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
